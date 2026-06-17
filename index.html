@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>unAustralian — Stop Albo ruining our Australian way of life</title>
+  <meta name="description" content="The Albanese government promised no changes to capital gains tax. They broke it. Tell your leaders this is unAustralian.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <a href="#top" class="nav-logo"><img src="assets/wordmark.png" alt="unAustralian"></a>
+    <div class="nav-links">
+      <a href="#test" class="nav-link">What's unAustralian</a>
+      <a href="#cost" class="nav-link">Albo's losers</a>
+      <a href="#count" class="nav-link">The Count</a>
+      <a href="#donate" class="nav-link">Donate</a>
+      <a href="#leaders" class="nav-cta">Speak up now &rarr;</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-menu" id="navMenu" hidden>
+      <a href="#test" class="nav-menu-link">What's unAustralian</a>
+      <a href="#cost" class="nav-menu-link">Albo's losers</a>
+      <a href="#count" class="nav-menu-link">The Count</a>
+      <a href="#donate" class="nav-menu-link">Donate</a>
+      <a href="#leaders" class="nav-menu-cta">Speak up now &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="top" class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="eyebrow eyebrow--center anim-sweep">
+        <span class="rule"></span>
+        <span class="eyebrow-text">Stop Albo ruining our Australian way of life</span>
+        <span class="rule"></span>
+      </div>
+      <img src="assets/au-hero.png" alt="unAustralian" class="hero-logo anim-sweep-2">
+      <p class="cv-h hero-line anim-sweep-3">No more <span class="hi-red">fair go</span>, no reward for <span class="hi-red">hard work</span>, no more <span class="hi-red">keeping their word</span>.</p>
+      <p class="hero-subhead anim-sweep-4">The Albanese government looked us in the eye and promised no changes to capital gains tax or negative gearing. They changed both. Now every Australian who ever saved, invested, or built something is paying for it. We expected better. That's not how we do things here.</p>
+      <div class="hero-ctas anim-sweep-5">
+        <a href="#leaders" class="btn btn-gold btn-lg">Tell your leaders before it's too late &rarr;</a>
+        <a href="#count" class="hero-count-link"><span class="hero-count" data-count-label>47,213</span> have already spoken up</a>
+      </div>
+    </div>
+    <div class="hero-skew"></div>
+  </header>
+
+  <!-- ===== TELL YOUR LEADERS ===== -->
+  <section id="leaders" class="sec sec--navy">
+    <div class="pledge-grid">
+      <div>
+        <div class="eyebrow">
+          <span class="rule rule--lg"></span>
+          <span class="eyebrow-text">Make your voice heard</span>
+        </div>
+        <h2 class="cv-h h-xl">Anyone who votes for this is <span class="it-gold">unAustralian</span>.</h2>
+        <p class="lead">Your message goes straight to your state's leaders. They will know that you — a voter in their state — believe this is unAustralian, and will not support any politician who votes for these changes.</p>
+        <div class="steps" id="steps"></div>
+      </div>
+
+      <div class="form-card">
+        <!-- form -->
+        <form id="leadersForm" class="leaders-form">
+          <h3 class="cv-h form-title">Tell your leaders</h3>
+          <div class="name-row">
+            <div>
+              <label for="f-first">First name *</label>
+              <input id="f-first" name="first" autocomplete="given-name">
+            </div>
+            <div>
+              <label for="f-last">Last name *</label>
+              <input id="f-last" name="last" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" placeholder="you@example.com.au" autocomplete="email">
+          </div>
+          <div class="postcode-row">
+            <div>
+              <label for="f-mobile">Mobile <span class="opt">(optional)</span></label>
+              <input id="f-mobile" name="mobile" placeholder="04XX XXX XXX" autocomplete="tel">
+            </div>
+            <div>
+              <label for="f-postcode">Postcode *</label>
+              <input id="f-postcode" name="postcode" inputmode="numeric" placeholder="2000" maxlength="4" autocomplete="postal-code">
+            </div>
+          </div>
+          <p class="form-err" id="formErr"></p>
+          <button type="submit" class="btn btn-gold btn-block">Tell My Leaders &rarr;</button>
+          <p class="fineprint">By submitting you authorise us to email your state leaders on your behalf. We never sell your data. See our privacy policy below.</p>
+        </form>
+
+        <!-- confirmation -->
+        <div class="confirm" id="leadersConfirm" hidden>
+          <div class="confirm-check"><span class="cv-h">&check;</span></div>
+          <h3 class="cv-h confirm-title">Message sent.</h3>
+          <p class="confirm-body">Thank you, <span data-confirm-first></span>. Your message has been sent to all <span class="gold-strong" data-confirm-leaders></span> leaders for <span class="white-strong" data-confirm-name></span>.</p>
+          <p class="confirm-sub">They now have it on record that a voter in <span data-confirm-postcode></span> thinks this is unAustralian — and will not back any politician who votes for these changes.</p>
+          <a href="#donate" class="btn btn-gold btn-block">Chip in to win this &rarr;</a>
+          <div class="share">
+            <div class="share-label">Now make it count — share it</div>
+            <div class="share-btns">
+              <a id="shareX" target="_blank" rel="noopener" class="btn btn-gold share-btn">Share on X</a>
+              <a id="shareFb" target="_blank" rel="noopener" class="btn btn-outline share-btn">Facebook</a>
+            </div>
+            <button type="button" class="link-btn" id="resetForm">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE'RE FIGHTING ===== -->
+  <section id="bills" class="sec sec--dark">
+    <div class="wrap-wide">
+      <div class="sec-head">
+        <div class="eyebrow">
+          <span class="rule rule--lg"></span>
+          <span class="eyebrow-text">What we're fighting</span>
+        </div>
+        <h2 class="cv-h h-lg">Stop Albo's unAustralian future.</h2>
+        <p class="lead">No spin, no jargon. Here is exactly what is on the table — and what we are asking leaders to do about each one.</p>
+      </div>
+      <div class="bills-grid" id="billsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== WHO LOSES ===== -->
+  <section id="cost" class="sec sec--navy sec--cost">
+    <div class="cost-glow"></div>
+    <div class="wrap-wide cost-head-wrap">
+      <div class="sec-head sec-head--wide">
+        <div class="eyebrow">
+          <span class="rule rule--red"></span>
+          <span class="eyebrow-text eyebrow-text--red">The human cost</span>
+        </div>
+        <h2 class="cv-h h-xl">Are you Albo's loser?</h2>
+        <p class="lead">The government says this is a tax on the wealthy. It isn't. Here are the six groups of Australians who pay the price for a broken promise.</p>
+        <h3 class="cv-h cost-swipe-line">Swipe to see if you're gonna lose out.</h3>
+      </div>
+    </div>
+
+    <div class="cost-scroll-wrap">
+      <div class="cost-scroll" id="costScroll"></div>
+      <div class="cost-fade"></div>
+      <button class="cost-swipe-btn" id="costSwipe" aria-label="Swipe to next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </button>
+    </div>
+
+    <div class="wrap-wide cost-foot">
+      <span class="hairline"></span>
+      <span class="cost-foot-text">Six groups. One broken promise.</span>
+    </div>
+  </section>
+
+  <!-- ===== THE UNAUSTRALIAN TEST ===== -->
+  <section id="test" class="sec sec--dark">
+    <div class="wrap-wide">
+      <div class="sec-head sec-head--test">
+        <div class="eyebrow">
+          <span class="rule rule--lg"></span>
+          <span class="eyebrow-text">The unAustralian Test</span>
+        </div>
+        <h2 class="cv-h h-xl">Albo failed the Australian test.</h2>
+        <p class="lead">The word "unAustralian" is the sharpest verdict in our culture. It says: you have failed the test of what this country stands for. Here is the test — and here is how the CGT changes fail it, six times over.</p>
+      </div>
+      <div class="test-grid" id="testGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== THE COUNT ===== -->
+  <section id="count" class="sec sec--navy sec--count">
+    <div class="count-glow"></div>
+    <div class="wrap-wide">
+      <div class="count-live">
+        <span class="eyebrow-text">● Live · updating now</span>
+      </div>
+      <div class="count-number" id="countNumber">47,213</div>
+      <p class="cv-h count-caption">Australians have told their leaders.</p>
+      <p class="count-sub">Every message is delivered to the sender's state leaders.</p>
+
+      <div class="count-grid">
+        <div>
+          <h3 class="cv-h count-map-title">Messages by state</h3>
+          <p class="count-hover" id="countHover">Hover a state to see its message count</p>
+          <svg id="countMap" viewBox="0 0 1000 938" class="count-map"></svg>
+        </div>
+        <div class="count-bars" id="countBars"></div>
+      </div>
+
+      <div class="count-cta-wrap">
+        <a href="#leaders" class="btn btn-gold btn-lg">Tell your leaders today &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DONATE ===== -->
+  <section id="donate" class="sec sec--dark sec--donate">
+    <div class="donate-glow"></div>
+    <div class="wrap-narrow">
+      <div class="donate-banner" id="donateBanner" hidden>
+        <span class="cv-h">&check;</span>
+        <span>Your message is on its way to <span class="gold-strong" data-banner-leaders></span> leaders for <span data-banner-name></span>. Now let's make it impossible to ignore.</span>
+      </div>
+
+      <div class="donate-head">
+        <div class="eyebrow eyebrow--center">
+          <span class="rule"></span>
+          <span class="eyebrow-text">Fund the fight</span>
+          <span class="rule"></span>
+        </div>
+        <h2 class="cv-h h-lg"><span class="muted">They have billions for spin.</span><br><span class="it-gold">We have you.</span></h2>
+        <p class="lead lead--center">We don't take a cent from any party. This campaign runs on Australians chipping in — every dollar goes to reaching more voters before the vote.</p>
+      </div>
+
+      <div class="don-freq-wrap">
+        <div class="don-freq" id="donFreq"></div>
+      </div>
+
+      <div class="donor-grid" id="donorGrid"></div>
+
+      <div class="don-custom" id="donCustom" hidden>
+        <span class="cv-h don-dollar">$</span>
+        <input type="text" inputmode="numeric" id="donCustomInput" placeholder="Enter your amount">
+      </div>
+
+      <a href="#donate" class="btn btn-gold btn-block btn-xl" id="donateBtn">Donate $65 &rarr;</a>
+
+      <p class="don-processing" id="donProcessing" hidden></p>
+      <p class="don-fineprint">Donations are not tax-deductible. unAustralian is a non-partisan campaign and accepts no funding from any political party. Payments are processed securely.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap-wide">
+      <img src="assets/wordmark.png" alt="unAustralian" class="footer-logo">
+      <p class="footer-blurb">unAustralian is a non-partisan campaign. We are not affiliated with any political party. We are Australians who believe in keeping promises, rewarding effort, and playing fair.</p>
+      <div class="footer-links">
+        <a href="#">Privacy policy</a>
+        <a href="#">Contact</a>
+        <a href="mailto:hello@unaustralian.com.au">hello@unaustralian.com.au</a>
+      </div>
+      <div class="footer-foot">
+        <p class="footer-auth">Authorised by C. Teller, Teller Consulting, Sydney NSW. This communication is intended to inform Australians about proposed taxation legislation and is not affiliated with any registered political party.</p>
+        <span class="footer-copy">© 2026 unAustralian</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="au-map-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
