@@ -146,6 +146,7 @@ img{ max-width:100%; }
 .leaders-form input{ width:100%; background:rgba(11,19,32,0.6); border:1px solid rgba(212,166,74,0.28); border-radius:2px; padding:12px 14px; color:#eef1f6; font-family:inherit; font-size:16px; outline:none; transition:border-color .2s; }
 .leaders-form input:focus{ border-color:#f2b705; }
 .leaders-form input.invalid{ border-color:#cc3344; }
+.leaders-form button[type="submit"]{ font-size:15px; letter-spacing:0.14em; text-transform:uppercase; padding:16px; border-radius:2px; }
 .name-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
 .field{ margin-bottom:14px; }
 .postcode-row{ display:grid; grid-template-columns:1.4fr 1fr; gap:14px; margin-bottom:24px; }
